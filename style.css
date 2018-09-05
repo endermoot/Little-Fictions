@@ -119,13 +119,6 @@ td {
     transform: rotate(90deg);
 }
 
-.comp-img {
-	background-image: url("https://image.ibb.co/dAbCze/Computer_2.jpg");
-	background-size: cover;
-	height: 400px;
-	width: 600px;
-}
-
 .caption {
 	position: relative;
 	top: 100%;
