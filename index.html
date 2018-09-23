@@ -28,6 +28,67 @@
 
 		<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
 			<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
+
+			<!-- More Java -->
+
+			<div>
+				<style>
+
+				</style>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+				<script type="text/javascript">
+
+					$(document).ready(function() {
+						$('#previous').on('click', function(){
+							// Change to the previous image
+
+							$('#im_' + currentImage).stop().fadeOut(1);
+
+							decreaseImage();
+
+							$('#im_' + currentImage).stop().fadeIn(1);
+
+						}); 
+
+						$('#next').on('click', function(){
+							// Change to the next image
+
+							$('#im_' + currentImage).stop().fadeOut(1);
+
+							increaseImage();
+
+							$('#im_' + currentImage).stop().fadeIn(1);
+
+						}); 
+
+						var currentImage = 1;
+
+						var totalImages = 3;
+
+						function increaseImage() {
+							/* Increase currentImage by 1.
+							* Resets to 1 if larger than totalImages
+							*/
+							++currentImage;
+
+							if(currentImage > totalImages) {
+								currentImage = 1;
+							}
+						}
+
+						function decreaseImage() {
+							/* Decrease currentImage by 1.
+							* Resets to totalImages if smaller than 1
+							*/
+							--currentImage;
+
+							if(currentImage < 1) {
+								currentImage = totalImages;
+							}
+						}
+					});
+				</script>
+			</div>
 	</head>
 
 
@@ -45,31 +106,27 @@
 
 		<br><br>
 
-		<center>
-			<img class="pigeon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLwC85jCGpT5Br_ZS5OKoHFeAdVV5MrX0MdFTAfsmVLeRNiJsyw">
-		</center>
-
 		<!-- Slideshow -->
 			<div id="showContainer">
 
 				<div class="imageContainer" id="im_1">
-					<img src="https://image.ibb.co/h1GjvU/Computer_2.jpg" />
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLwC85jCGpT5Br_ZS5OKoHFeAdVV5MrX0MdFTAfsmVLeRNiJsyw" />
 					<div class="caption">
-						Windmill
+						A pigeon!
 					</div>
 				</div>
 
 				<div class="imageContainer" id="im_2">
-					<img src="https://image.ibb.co/ksnDpp/Alex_3.jpg" />
+					<img src="data:image/jpeg;base64,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" />
 					<div class="caption">
-						Plant
+						A snake!
 					</div>
 				</div>
 
 				<div class="imageContainer" id="im_3">
-					<img src="Images/3.jpg" />
+					<img src="https://image.ibb.co/ksnDpp/Alex_3.jpg" />
 					<div class="caption">
-						Dog
+						An idiot!
 					</div>
 				</div>
 
