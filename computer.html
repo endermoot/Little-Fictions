@@ -3,6 +3,7 @@
 	<head>
 		<title>Little Fictions - Computer Build</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+
 		<!-- Directory -->
 				<div id=directory>
 					<table>
@@ -24,19 +25,81 @@
 						</tr>
 					</table>
 				</div>
+
 			<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
 				<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
+
+		<!---------------------------------- Slideshow (JAVA) --------------------------->
+			<div>
+				<style>
+
+				</style>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+				<script type="text/javascript">
+
+					$(document).ready(function() {
+						$('#previous').on('click', function(){
+							// Change to the previous image
+
+							$('#im_' + currentImage).stop().fadeOut(1);
+
+							decreaseImage();
+
+							$('#im_' + currentImage).stop().fadeIn(1);
+
+						}); 
+
+						$('#next').on('click', function(){
+							// Change to the next image
+
+							$('#im_' + currentImage).stop().fadeOut(1);
+
+							increaseImage();
+
+							$('#im_' + currentImage).stop().fadeIn(1);
+
+						}); 
+
+						var currentImage = 1;
+
+						var totalImages = 8;
+
+						function increaseImage() {
+							/* Increase currentImage by 1.
+							* Resets to 1 if larger than totalImages
+							*/
+							++currentImage;
+
+							if(currentImage > totalImages) {
+								currentImage = 1;
+							}
+						}
+
+						function decreaseImage() {
+							/* Decrease currentImage by 1.
+							* Resets to totalImages if smaller than 1
+							*/
+							--currentImage;
+
+							if(currentImage < 1) {
+								currentImage = totalImages;
+							}
+						}
+					});
+				</script>
+			</div>
 	</head>
+
+
+
+	<!---------------------------------------- BODY ------------------------------------->
+
+
+
 	<body>
-		<!-- Image -->
-			<center>
-				<div class="comp-img">
-					<img src="https://image.ibb.co/h1GjvU/Computer_2.jpg">
-					<p class="caption"> The stickers make it go faster </p>
-				</div>
-			</center>
 
 		<!-- Text -->
+
 		<div class="text">
 			<h3> Shopping for Parts </h3>
 				<p> I've been wanting to build my own PC for a while and I figured that this summer would be the perfect time to do so; I would finally get the money to make a good gaming build and I had more than enough time. </p>
@@ -56,7 +119,73 @@
 				<p> After the cooler, the rest of my build was pretty boring. Nothing happened, and I was happy with that. In total, it took me about 5 hours to do everything, after the incident before, I was taking my time with <em>everything</em>. If you'd like a full list of my parts, you can find them <a href="https://pcpartpicker.com/list/YRBDnH"> here</a>, just add a generic monitor and Windows (if that counts).</p>
 
 			<h3> Performance </h3>
-				<p> I'm sure you're probably wonder how this thing fairs up against the games I built it for, and I must say that I can't complain. Right now, I have the CPU overclocked to 13.9% and I can play Battlefield 1 on the higher settings and still get 60 FPS with the occasional drop due to lag spikes. I run The Witcher 3, War Thunder and Overwatch all on max settings with absolutely no problems; but even more importantly than all, I can run Minecraft on a whopping <strong> 1,000+ FPS.</strong> Intense. </p>
+				<p> I'm sure you're probably wonder how this thing fairs up against the games I built it for, and I must say that I can't complain. Right now, I have the CPU overclocked to 13.9% and I can play Battlefield 1 on the higher settings and still get 60 FPS with the occasional drop due to lag spikes. I run The Witcher 3, War Thunder and Overwatch all on max settings with absolutely no problems; but even more impressively, I can run Minecraft on a whopping <strong> 1,000+ FPS.</strong> Intense. </p>
 		</div>
+
+<br><br><br><br>
+
+		<!------------------------------------ Slideshow -------------------------------->
+
+			<div id="showContainer">
+
+				<div class="imageContainer" id="im_1">
+					<img src="https://image.ibb.co/h1GjvU/Computer_2.jpg" />
+					<div class="caption">
+						A picture of my computer; the stickers make it go faster!
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_2">
+					<img src="https://image.ibb.co/hZpKp9/The_Witcher_3.png" />
+					<div class="caption">
+						"The Witcher 3: Wild Hunt"
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_3">
+					<img src="https://image.ibb.co/cTfQU9/King_2.png" />
+					<div class="caption">
+						"War Thunder": King Tiger
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_4">
+					<img src="https://image.ibb.co/neFnbp/King_1.png" />
+					<div class="caption">
+						"War Thunder": King Tiger
+					</div>
+				</div>
+				
+				<div class="imageContainer" id="im_5">
+					<img src="https://image.ibb.co/dP03Gp/King_3.png" />
+					<div class="caption">
+						"War Thunder": King Tiger
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_6">
+					<img src="https://image.ibb.co/f5xN99/Spitfire_3.png" />
+					<div class="caption">
+						"War Thunder": Spitfire Mk. IIb
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_7">
+					<img src="https://image.ibb.co/iE0yhU/Spitfire_2.png" />
+					<div class="caption">
+						"War Thunder": Spitfire Mk. IIb
+					</div>
+				</div>
+
+				<div class="imageContainer" id="im_8">
+					<img src="https://image.ibb.co/kK0yhU/Spitfire_1.png" />
+					<div class="caption">
+						"War Thunder": Spitfire Mk. IIb
+					</div>
+				</div>
+
+				<div class="navButton" id="previous">&#10094;</div>
+				<div class="navButton" id="next">&#10095;</div>
+			</div>
 	</body>
 </html>
