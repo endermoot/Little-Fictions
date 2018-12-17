@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Counter</title>
+</head>
+<body>
+	<h1>Date Counter</h1>
+	<p>Input a starting date and an ending date below. Your result will be the amount of time between those two dates.</p>
+
+	<h4>Starting date</h4>
+		<p>YYYY/MM/DD hh:mm:ss</p>
+		<input type="text" id="dateInput1">
+			<button type="button" onclick="dateFunction1()">Enter</button>
+		<p id="date1"></p>
+
+<br>
+
+	<h4>Ending date</h4>
+		<p>YYYY/MM/DD hh:mm:ss</p>
+		<input type="text" id="dateInput2">
+			<button type="button" onclick="dateFunction2()">Enter</button>
+		<p id="date2"></p>
+
+<br>
+
+	<h4>Result</h4>
+		<p id="result"></p>
+
+	<!-- JavaScript -->
+
+		<script type="text/javascript">
+			let firstDate;
+			let secondDate;
+
+			function dateFunction1() {
+				firstDate = new Date(document.getElementById("dateInput1").value);
+				document.getElementById("date1").innerHTML = ("First date saved as: " + firstDate);
+				return firstDate;
+			};
+
+			function dateFunction2() {
+				secondDate = new Date(document.getElementById("dateInput2").value);
+				document.getElementById("date2").innerHTML = ("Second date saved as: " + secondDate);
+				dateCalculate();
+				return secondDate;
+			};
+
+			function dateCalculate() {
+				var diff = (secondDate - firstDate)/1000;
+			    diff = Math.abs(Math.floor(diff));
+
+			    var days = Math.floor(diff/(24*60*60));
+			    var leftSec = diff - days * 24*60*60;
+
+			    var hrs = Math.floor(leftSec/(60*60));
+			    leftSec = leftSec - hrs * 60*60;
+
+			    var min = Math.floor(leftSec/(60));
+			    leftSec = leftSec - min * 60;
+
+			    document.getElementById("result").innerHTML = days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " have passed from " + firstDate + " since " + secondDate;
+			};
+		</script>
+</body>
+</html>

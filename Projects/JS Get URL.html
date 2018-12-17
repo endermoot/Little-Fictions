@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WHAT IS GOING ON</title>
+	<link rel="stylesheet" type="text/css" href="CONFUSION.css">
+</head>
+<body>
+	<h3>The url of this page is: </h3>
+		<p id="url"></p>
+
+	<br>
+
+	<h3>The title of this page is: </h3>
+		<p id="title"></p>
+
+	<script type="text/javascript">
+		document.getElementById("url").innerHTML = window.location.href;
+		document.getElementById("title").innerHTML = document.title;
+	</script>
+</body>
+</html>

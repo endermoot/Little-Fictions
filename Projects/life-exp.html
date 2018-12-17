@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="F:\Life Expectancy\style.css" type="text/css" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>How Long will you Live?</title>
+		<h1>How Long will you Live?</h1>
+		<script type="text/javascript">
+			document.bgColor = "green";
+		</script>
+	</head>
+
+
+	<body> 
+		<script type="text/javascript">
+			var button = document.createElement("button");
+			button.innerHTML = "Do Something";
+			// Finding users age
+			let x = prompt("How old are you?", 0);
+				x = Math.floor(x);
+					// Checks for invalid inputs
+					if(x===x) {
+						// Ensures that user input the correct age that they are looking for after flooring
+						if(confirm("Are you " + x + " years old (after rounding down)?")) {
+							// Continue
+						} else {
+							alert("Oops! We'll try again.");
+							/* Following line of code (page refresh) found online from: "https://stackoverflow.com/questions/41020403/reload-a-page-with-location-href-or-window-location-reloadtrue/41020477" */
+							window.location.reload(true);
+						}
+					} else {
+						// Refreshes the page if the user inputs a symbol or other incorrect input.
+						alert("Please insert a number that is positive!");
+						window.location.reload(true);
+						}
+					// If the user inputs a number greater than 100 or less than 0, reset.
+					if(x>100) {
+						alert("That's too much!");
+						window.location.reload(true);
+					}
+					if(x<0) {
+						alert("Please try again.");
+						window.location.reload(true);
+					}
+
+			// Finding users sex
+			let s = confirm("Is your sex male? Please press 'OK' if yes and 'cancel' if otherwise.");
+				// Setting s to the proper value based on users choice
+				if (s===true) {
+					s = 1;
+					document.bgColor = "blue";
+				} else {
+					document.bgColor = "pink";
+					s = 0;
+				};
+				/*  First array contains female data whilst second array contains male data.
+					Array is formatted as such: tableEX[s][x]; s being sex value and x being age.
+					
+					Got syntax help from "https://www.elated.com/articles/nested-arrays-in-javascript/", but code is completely my own. */
+
+				let tableEX = new Array();
+					tableEX[0] = new Array(
+						81.3,
+						80.7,
+						79.7,
+						78.7,
+						77.7,
+						76.8,
+						75.8,
+						74.8,
+						73.8,
+						72.8,
+						71.8,
+						70.8,
+						69.8,
+						68.8,
+						67.8,
+						66.8,
+						65.8,
+						64.9,
+						63.9,
+						62.9,
+						61.9,
+						60.9,
+						60.0,
+						59.0,
+						58.0,
+						57.0,
+						56.1,
+						55.1,
+						54.1,
+						53.2,
+						52.2,
+						51.2,
+						50.3,
+						49.3,
+						48.4,
+						47.4,
+						46.4,
+						45.5,
+						44.5,
+						43.6,
+						42.6,
+						41.7,
+						40.8,
+						39.8,
+						38.9,
+						38.0,
+						37.0,
+						36.1,
+						35.2,
+						34.3,
+						33.4,
+						32.5,
+						31.6,
+						30.7,
+						29.8,
+						29.0,
+						28.1,
+						27.3,
+						26.4,
+						25.6,
+						24.7,
+						23.9,
+						23.1,
+						22.2,
+						21.4,
+						20.6,
+						19.8,
+						19.0,
+						18.2,
+						17.4,
+						16.7,
+						15.9,
+						15.2,
+						14.5,
+						13.8,
+						13.1,
+						12.4,
+						11.7,
+						11.1,
+						10.4,
+						9.8,
+						9.2,
+						8.6,
+						8.1,
+						7.6,
+						7.1,
+						6.6,
+						6.1,
+						5.7,
+						5.3,
+						4.9,
+						4.5,
+						4.2,
+						3.9,
+						3.6,
+						3.4,
+						3.1,
+						2.9,
+						2.7,
+						2.5,
+						2.3
+					);
+					tableEX[1] = new Array(
+						76.5,
+						76.0,
+						75.0,
+						74.0,
+						73.0,
+						72.0,
+						71.0,
+						70.1,
+						69.1,
+						68.1,
+						67.1,
+						66.1,
+						65.1,
+						64.1,
+						63.1,
+						62.1,
+						61.2,
+						60.2,
+						59.2,
+						58.3,
+						57.3,
+						56.4,
+						55.4,
+						54.5,
+						53.6,
+						52.7,
+						51.7,
+						50.8,
+						49.9,
+						48.9,
+						48.0,
+						47.1,
+						46.2,
+						45.2,
+						44.3,
+						43.4,
+						42.4,
+						41.5,
+						40.6,
+						39.7,
+						38.8,
+						37.8,
+						36.9,
+						36.0,
+						35.1,
+						34.2,
+						33.3,
+						32.4,
+						31.5,
+						30.7,
+						29.8,
+						28.9,
+						28.1,
+						27.3,
+						26.4,
+						25.6,
+						24.8,
+						24.0,
+						23.3,
+						22.5,
+						21.7,
+						21.0,
+						20.2,
+						19.5,
+						18.7,
+						18.0,
+						17.3,
+						16.6,
+						15.9,
+						15.2,
+						14.5,
+						13.8,
+						13.1,
+						12.5,
+						11.9,
+						11.2,
+						10.6,
+						10.0,
+						9.5,
+						8.9,
+						8.4,
+						7.9,
+						7.4,
+						6.9,
+						6.4,
+						6.0,
+						5.6,
+						5.2,
+						4.8,
+						4.5,
+						4.1,
+						3.8,
+						3.6,
+						3.3,
+						3.1,
+						2.9,
+						2.7,
+						2.5,
+						2.4,
+						2.2,
+						2.1
+					);
+
+				// Allows for users total life expectancy to be calculated and then displayed
+
+				const totalEX = (x + tableEX[s][x]);
+					alert("According to CDC 2014 statistics for US residents, you should live for " + tableEX[s][x] + " more years. This adds to a grand total of " + totalEX + " years. Congratulations!");
+		</script>
+		<p style="color: white"> Statistics can be found <a target="_blank" href="https://www.cdc.gov/nchs/data/nvsr/nvsr66/nvsr66_04.pdf"> here. </a> Male data is located on pages 11-13 whilst female data is located on pages 13-14. </p>
+	</body>
+	
+</html>

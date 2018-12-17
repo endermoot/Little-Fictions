@@ -21,19 +21,22 @@
 
 						<!-- Computer -->
 							<td><a class="page" style="text-decoration: none" href="./computer.html"> Computer Build </a></td>
+
+						<!-- Projects -->
+							<td><a class="page" style="text-decoration: none" href="./more-things.html"> More Cool Stuff</a></td>
+
+						<!-- Arrows -->
+							<button type="button" onclick="backArrow()"> <-- </button>
+
+							<button type="button" onclick="enter()"> Jump </button>
+
+							<button type="button" onclick="forwardArrow()"> --> </button>
 					</tr>
 				</table>
 			</div>
 		<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
 			<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
 	</head>
-
-
-
-	<!---------------------------------------- BODY -------------------------------------->
-
-
-
 	<body>
 		<!-- Image -->
 			<div class="MET">
@@ -64,4 +67,21 @@
 
 				<p> I feel that I accomplished much in my time at the MET, as brief as it was. I’ve learned how to organize an event from start to finish, see things in the bigger picture, contribute to a team and I’ve even discovered a lot about myself. I learned not to take myself for granted and I’ve finally seen that I’m capable of so much more than I thought I could be. </p>
 		</div>
+
+		<!-- JS -->
+			<script type="text/javascript">
+				function backArrow() {
+					window.history.back();
+				};
+
+				function forwardArrow() {
+					window.history.forward();
+				};
+
+				function enter() {
+					let x = prompt("Enter a value to jump to. Positive is forward, negative is backward.");
+					window.history.go(x);
+				};
+			</script>
 	</body>
+</html>

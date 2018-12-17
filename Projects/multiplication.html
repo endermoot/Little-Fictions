@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L</title>
+	</head>
+	<body>
+		<p id="answers"></p>
+		<script type="text/javascript">
+			// Setting variables to user inputs
+			let table = parseInt(prompt("What multiplication table would you like to use? Note that the value must be an integer or it will be rounded.", 1));
+			let start = parseInt(prompt("Where would you like to start? Note that the value must be an integer or it will be rounded i.e. 9*5", 1));
+			let end = parseInt(prompt("Where would you like to end? Note that the value must be an integer or it will be rounded i.e. 9*8", 1));
+			let final = "";
+				
+			if (end < start) {
+				function multiplyNeg() {
+					while (end <= start) {
+						final += "<br>" + (table * start);
+						document.getElementById("answers").innerHTML = final;
+						start--;
+					};
+				};
+				
+				multiplyNeg();
+				
+			} else {
+				function multiplyPos() {
+					while (end >= start) {
+						final += "<br>" + (table * start);
+						document.getElementById("answers").innerHTML = final;
+						start++;
+					};
+				};
+				multiplyPos();
+			};
+			
+		</script>
+	</body>
+</html>

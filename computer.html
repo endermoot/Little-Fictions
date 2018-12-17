@@ -1,191 +1,87 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Little Fictions - Computer Build</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+	<title>Little Fictions - Computer Build</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Directory -->
+			<div id=directory>
+				<table>
+					<tr>
+						<!-- Home -->
+							<td class="home"><a class="home" style="text-decoration: none" href="index.html"> Little Fictions </a></td>
 
-		<!-- Directory -->
-				<div id=directory>
-					<table>
-						<tr>
-							<!-- Home -->
-								<td class="home"><a class="home" style="text-decoration: none" href="index.html"> Little Fictions </a></td>
+						<!-- About -->
+							<td><a class="page" style="text-decoration: none" href="./about.html"> About </a></td>
 
-							<!-- About -->
-								<td><a class="page" style="text-decoration: none" href="./about.html"> About </a></td>
+						<!-- Project -->
+							<td><a class="page" style="text-decoration: none" href="./project.html"> My Summer Project </a></td>
 
-							<!-- Project -->
-								<td><a class="page" style="text-decoration: none" href="./project.html"> My Summer Project </a></td>
+						<!-- MET -->
+							<td><a class="page" style="text-decoration: none" href="./MET.html"> MET Internship </a></td>
 
-							<!-- MET -->
-								<td><a class="page" style="text-decoration: none" href="./MET.html"> MET Internship </a></td>
+						<!-- Computer -->
+							<td><a class="page" style="text-decoration: none" href="./computer.html"> Computer Build </a></td>
 
-							<!-- Computer -->
-								<td><a class="page" style="text-decoration: none" href="./computer.html"> Computer Build </a></td>
-						</tr>
-					</table>
-				</div>
+						<!-- Projects -->
+							<td><a class="page" style="text-decoration: none" href="./more-things.html"> More Cool Stuff</a></td>
 
-			<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
-				<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
+						<!-- Arrows -->
+							<button type="button" onclick="backArrow()"> <-- </button>
 
-		<!---------------------------------- Slideshow (JAVA) --------------------------->
-			<div>
-				<style>
+							<button type="button" onclick="enter()"> Jump </button>
 
-				</style>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-				<script type="text/javascript">
-
-					$(document).ready(function() {
-						$('#previous').on('click', function(){
-							// Change to the previous image
-
-							$('#im_' + currentImage).stop().fadeOut(1);
-
-							decreaseImage();
-
-							$('#im_' + currentImage).stop().fadeIn(1);
-
-						}); 
-
-						$('#next').on('click', function(){
-							// Change to the next image
-
-							$('#im_' + currentImage).stop().fadeOut(1);
-
-							increaseImage();
-
-							$('#im_' + currentImage).stop().fadeIn(1);
-
-						}); 
-
-						var currentImage = 1;
-
-						var totalImages = 8;
-
-						function increaseImage() {
-							/* Increase currentImage by 1.
-							* Resets to 1 if larger than totalImages
-							*/
-							++currentImage;
-
-							if(currentImage > totalImages) {
-								currentImage = 1;
-							}
-						}
-
-						function decreaseImage() {
-							/* Decrease currentImage by 1.
-							* Resets to totalImages if smaller than 1
-							*/
-							--currentImage;
-
-							if(currentImage < 1) {
-								currentImage = totalImages;
-							}
-						}
-					});
-				</script>
+							<button type="button" onclick="forwardArrow()"> --> </button>
+					</tr>
+				</table>
 			</div>
-	</head>
-
-
-
-	<!---------------------------------------- BODY ------------------------------------->
-
-
-
-	<body>
-
-		<!-- Text -->
-
-		<div class="text">
-			<h3> Shopping for Parts </h3>
-				<p> I've been wanting to build my own PC for a while and I figured that this summer would be the perfect time to do so; I would finally get the money to make a good gaming build and I had more than enough time. </p>
-
-				<p> I spent the majority of the early summer researching what parts to get and how to shop for them. I used <a target="_blank" href="https://www.newegg.com/"> Newegg.com </a> to find and compare what parts to buy. I already had a rough idea of what I needed/wanted, which definitely helped. I already had an Nvidia GeForce 1060 3GB from an upgrade I did on my old PC with a Corsair PSU from that same upgrade to accompany it. From there, it was mostly about getting a good CPU and Motherboard. </p>
-
-				<h4> CPU </h4>
-					<p> For whatever reason, I lean towards Intel when it comes to CPUs, maybe it's because their products are (marginally) more simple to shop for than AMD's. With that said, I began to look at the Kaby Lake class of processors because it somehow rung a bell... After looking around, I also discovered Intel's newest line of CPU's, Coffee Lake, or Generation 8. I then had two big decisions to make: the first being which generation to buy and whether or not to get an i5 or i7. </p>
-
-					<p>As the gen 8 processors boast two more cores than Kaby Lakes four, I decided to go for them. Although most games don't utilize more than 2 cores, bigger AAA games are looking into it, I wanted to future-proof this thing as much as I could. Now, I was left on which class of processor to get; as i7 was more than I needed and cost more than I had, the i5 line seemed the most logical. I eventually settled on the i5-8600k as it's overclocking capability was very lucrative to me. From there, I spent the rest of my time finding compatable parts.</p>
-
-			<h3> The Actual Building Process </h3>
-				<p> Since I skipped out on helping build the computer's in our class, I was left pretty clueless. In my search for a tutorial video, I found one by <a target="_blank" href="https://www.youtube.com/watch?v=IhX0fOUYd8Q"> Bitwit </a>and followed along while building. The <em> majority </em> of my build was pretty standard and quite unremarkable; I installed the CPU with no problems, applied the thermal paste a-ok, everything was going great. Until I had to install the CPU cooler. </p>
-
-				<p> For whatever reason, I just could not comprehend that LGA 115x was meant for my processor, as the chip set is 1151. It took me about 30 minutes to realize that the x was a variable (which would explain my regents scores...) After I finally figured out how to set the base, for whatever reason, one of the screws just would not go down, I couldn't put it in. I pressed down the cooler, I even had to slide it around a bit (I had the thermal paste, don't scream). At this point I was panicking, regretting literally every life decision I had ever made up to that point. About half an hour later, I realized I had it the wrong way around. Oops. </p>
-
-				<p> After the cooler, the rest of my build was pretty boring. Nothing happened, and I was happy with that. In total, it took me about 5 hours to do everything, after the incident before, I was taking my time with <em>everything</em>. If you'd like a full list of my parts, you can find them <a href="https://pcpartpicker.com/list/YRBDnH"> here</a>, just add a generic monitor and Windows (if that counts).</p>
-
-			<h3> Performance </h3>
-				<p> I'm sure you're probably wonder how this thing fairs up against the games I built it for, and I must say that I can't complain. Right now, I have the CPU overclocked to 13.9% and I can play Battlefield 1 on the higher settings and still get 60 FPS with the occasional drop due to lag spikes. I run The Witcher 3, War Thunder and Overwatch all on max settings with absolutely no problems; but even more impressively, I can run Minecraft on a whopping <strong> 1,000+ FPS.</strong> Intense. </p>
-		</div>
-
-<br><br><br><br>
-
-		<!------------------------------------ Slideshow -------------------------------->
-
-			<div id="showContainer">
-
-				<div class="imageContainer" id="im_1">
-					<img src="https://image.ibb.co/h1GjvU/Computer_2.jpg" />
-					<div class="caption">
-						A picture of my computer; the stickers make it go faster!
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_2">
-					<img src="https://image.ibb.co/hZpKp9/The_Witcher_3.png" />
-					<div class="caption">
-						"The Witcher 3: Wild Hunt"
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_3">
-					<img src="https://image.ibb.co/cTfQU9/King_2.png" />
-					<div class="caption">
-						"War Thunder": King Tiger
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_4">
-					<img src="https://image.ibb.co/neFnbp/King_1.png" />
-					<div class="caption">
-						"War Thunder": King Tiger
-					</div>
-				</div>
-				
-				<div class="imageContainer" id="im_5">
-					<img src="https://image.ibb.co/dP03Gp/King_3.png" />
-					<div class="caption">
-						"War Thunder": King Tiger
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_6">
-					<img src="https://image.ibb.co/f5xN99/Spitfire_3.png" />
-					<div class="caption">
-						"War Thunder": Spitfire Mk. IIb
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_7">
-					<img src="https://image.ibb.co/iE0yhU/Spitfire_2.png" />
-					<div class="caption">
-						"War Thunder": Spitfire Mk. IIb
-					</div>
-				</div>
-
-				<div class="imageContainer" id="im_8">
-					<img src="https://image.ibb.co/kK0yhU/Spitfire_1.png" />
-					<div class="caption">
-						"War Thunder": Spitfire Mk. IIb
-					</div>
-				</div>
-
-				<div class="navButton" id="previous">&#10094;</div>
-				<div class="navButton" id="next">&#10095;</div>
+		<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
+			<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
+<body>
+	<!-- Image -->
+		<center>
+			<div class="comp-img">
+				<img src="https://image.ibb.co/dAbCze/Computer_2.jpg">
+				<p class="caption"> The stickers make it go faster </p>
 			</div>
-	</body>
+		</center>
+
+	<!-- Text -->
+	<div class="text">
+		<h3> Shopping for Parts </h3>
+			<p> I've been wanting to build my own PC for a while and I figured that this summer would be the perfect time to do so; I would finally get the money to make a good gaming build and I had more than enough time. </p>
+
+			<p> I spent the majority of the early summer researching what parts to get and how to shop for them. I used <a target="_blank" href="https://www.newegg.com/"> Newegg.com </a> to find and compare what parts to buy. I already had a rough idea of what I needed/wanted, which definitely helped. I already had an Nvidia GeForce 1060 3GB from an upgrade I did on my old PC with a Corsair PSU from that same upgrade to accompany it. From there, it was mostly about getting a good CPU and Motherboard. </p>
+
+			<h4> CPU </h4>
+				<p> For whatever reason, I lean towards Intel when it comes to CPUs, maybe it's because their products are (marginally) more simple to shop for than AMD's. With that said, I began to look at the Kaby Lake class of processors because it somehow rung a bell... After looking around, I also discovered Intel's newest line of CPU's, Coffee Lake, or Generation 8. I then had two big decisions to make: the first being which generation to buy and whether or not to get an i5 or i7. </p>
+
+				<p>As the gen 8 processors boast two more cores than Kaby Lakes four, I decided to go for them. Although most games don't utilize more than 2 cores, bigger AAA games are looking into it, I wanted to future-proof this thing as much as I could. Now, I was left on which class of processor to get; as i7 was more than I needed and cost more than I had, the i5 line seemed the most logical. I eventually settled on the i5-8600k as it's overclocking capability was very lucrative to me. From there, I spent the rest of my time finding compatable parts.</p>
+
+		<h3> The Actual Building Process </h3>
+			<p> Since I skipped out on helping build the computer's in our class, I was left pretty clueless. In my search for a tutorial video, I found one by <a target="_blank" href="https://www.youtube.com/watch?v=IhX0fOUYd8Q"> Bitwit </a>and followed along while building. The <em> majority </em> of my build was pretty standard and quite unremarkable; I installed the CPU with no problems, applied the thermal paste a-ok, everything was going great. Until I had to install the CPU cooler. </p>
+
+			<p> For whatever reason, I just could not comprehend that LGA 115x was meant for my processor, as the chip set is 1151. It took me about 30 minutes to realize that the x was a variable (which would explain my regents scores...) After I finally figured out how to set the base, for whatever reason, one of the screws just would not go down, I couldn't put it in. I pressed down the cooler, I even had to slide it around a bit (I had the thermal paste, don't scream). At this point I was panicking, regretting literally every life decision I had ever made up to that point. About half an hour later, I realized I had it the wrong way around. Oops. </p>
+
+			<p> After the cooler, the rest of my build was pretty boring. Nothing happened, and I was happy with that. In total, it took me about 5 hours to do everything, after the incident before, I was taking my time with <em>everything</em>. If you'd like a full list of my parts, you can find them <a href="https://pcpartpicker.com/list/YRBDnH"> here</a>, just add a generic monitor and Windows (if that counts).</p>
+
+		<h3> Performance </h3>
+			<p> I'm sure you're probably wonder how this thing fairs up against the games I built it for, and I must say that I can't complain. Right now, I have the CPU overclocked to 13.9% and I can play Battlefield 1 on the higher settings and still get 60 FPS with the occasional drop due to lag spikes. I run The Witcher 3, War Thunder and Overwatch all on max settings with absolutely no problems; but even more importantly than all, I can run Minecraft on a whopping <strong> 1,000+ FPS.</strong> Intense. </p>
+	</div>
+
+	<!-- JS -->
+			<script type="text/javascript">
+				function backArrow() {
+					window.history.back();
+				};
+
+				function forwardArrow() {
+					window.history.forward();
+				};
+
+				function enter() {
+					let x = prompt("Enter a value to jump to. Positive is forward, negative is backward.");
+					window.history.go(x);
+				};
+			</script>
+</body>
 </html>

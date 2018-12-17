@@ -21,20 +21,22 @@
 
 						<!-- Computer -->
 							<td><a class="page" style="text-decoration: none" href="./computer.html"> Computer Build </a></td>
+
+						<!-- Projects -->
+							<td><a class="page" style="text-decoration: none" href="./more-things.html"> More Cool Stuff</a></td>
+
+						<!-- Arrows -->
+							<button type="button" onclick="backArrow()"> <-- </button>
+
+							<button type="button" onclick="enter()"> Jump </button>
+
+							<button type="button" onclick="forwardArrow()"> --> </button>s
 					</tr>
 				</table>
 			</div>
 		<!-- Fonts: Monoton, Roboto Condensed, Exo and Pathway Gothic One -->
 			<link href="https://fonts.googleapis.com/css?family=Exo:700|Monoton|Pathway+Gothic+One|Roboto+Condensed" rel="stylesheet">
 	</head>
-
-
-
-
-	<!---------------------------------------- BODY -------------------------------------->
-
-
-	
 	<body>
 		<!-- Image -->
 			<center>
@@ -65,6 +67,21 @@
 					<li> <a target="_blank" href="https://docs.google.com/document/d/1cv1sUGWryosJDJwGeBWbRoMTmJpCYJ5NuZCsIBnX5qE/edit?usp=sharing"> "The Jump"</a></li>
 				</ol>
 		</div>
+
+		<!-- JS -->
+			<script type="text/javascript">
+				function backArrow() {
+					window.history.back();
+				};
+
+				function forwardArrow() {
+					window.history.forward();
+				};
+
+				function enter() {
+					let x = prompt("Enter a value to jump to. Positive is forward, negative is backward.");
+					window.history.go(x);
+				};
+			</script>
 	</body>
-			
 </html>

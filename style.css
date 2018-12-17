@@ -131,11 +131,6 @@ a {
 	
 }
 
-.slidepic {
-	height: 670px;
-	width: 503px;
-}
-
 .comp-1 {
 	height: 600px;
 	width: 600px;
@@ -175,32 +170,12 @@ a {
 	top: 50px;
 }
 
-.navButton {
-  /* Make buttons look nice */ 
-	cursor: pointer;
-	float: left;
-	width: 25px;
-	height: 22px;
-	padding: 10px;
-	margin-right: 5px;
-	overflow: hidden;
+.newProjects {
+	font-size: 20px;
+	text-indent: 20px;
+	line-height: 30px;
+	font-family: "roboto condensed";
 	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	background: #000000;
-	opacity: 0.65;
-	user-select: none;
-}
-.navButton:hover {
-	opacity: 1;
-}
-.caption {
-	float: right;
-}
-.imageContainer:not(:first-child) {
-  /* Hide all images except the first */
-	display: none;
 }
 
 #directory {
@@ -208,11 +183,35 @@ a {
 	color: rgb(172, 36, 36);
 }
 
-#showContainer {
-  /* Main wrapper for all images */
-	width: 670px;
-	padding: 0;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
+
+
+
+
+
+
+
+
+
+.temp {
+	text-align: center;
 }
+
+.calculator {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+#img-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+

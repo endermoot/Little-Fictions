@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+	<link rel="stylesheet" type="text/css" href="./TempStyle.css">
+</head>
+<body>
+	<h1>Temperature Converter</h1>
+		<br>
+		<p>This webpage was made to convert different units of temperature.</p>
+		<p>Please insert a temperature below to have it converted to Celcius.</p>
+		<br>
+
+	<!--Textbox -->
+		<input type="text" id="Input" oninput="equation()">
+
+	<!-- Answer -->
+		<h2> Your answer is...</h2>
+			<p id="answer"></p>
+
+	<script type="text/javascript">
+		function equation() {
+			let f = parseInt(document.getElementById("Input").value);
+			let fCheck = Math.floor(f);
+			const error = "Something went wrong, are you sure you input a number?";
+				
+			//
+			if(f == fCheck) {
+				let celsius = ((f - 32) * 5/9);
+				document.getElementById("answer").innerHTML = (celsius);
+			} else {
+				document.getElementById("answer").innerHTML = (error);
+			};
+		};
+	</script>
+</body>
+</html>

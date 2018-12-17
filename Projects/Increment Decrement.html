@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers 'n' Stuff</title>
+</head>
+<body>
+	<center><h1>Numbers 'n' Stuff!</h1></center>
+	<script type="text/javascript">
+		let x = parseInt(prompt("Welcome to Numbers 'n' Stuff, input a number and I'll add or subtract it.", 0));
+		let operation = parseInt(prompt("Please insert 1 if you'd like to add or 2 if you'd like to subtract.", 1));
+		const xInitial = x;
+		let counter = 0;
+		//Addition
+			if(operation = 1) {
+				while(counter <= 9) {
+					if(x ++== (xInitial + 9)){
+						alert("We made it to " + x + "! Hooray!");
+						window.location.reset(true);
+					} else {
+					alert("Right now we're at " + x + ", hang on!");
+						counter++;
+				};
+				};
+		//Subtraction
+			} else if(operation = 2){
+				while(counter <= 9) {
+					if(x --== (xInitial - 9)){
+						alert("We made it to " + x + "! Hooray!");
+						window.location.reset(true);
+					} else {
+					alert("Right now we're at " + x + ", hang on!");
+						counter++;
+				};
+				};
+			} else {
+				alert("I don't think that right... did you input 1 or 2?");
+			}
+	</script>
+</body>
+</html>

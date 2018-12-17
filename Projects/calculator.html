@@ -1,0 +1,191 @@
+<html>
+<head>
+	<title>A Simple Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calculatorStyle.css">
+</head>
+<body>
+	<h1>A Calculator!</h1>
+	<p>Use this program to calculate things :)</p>
+	<!-- Calculator -->
+		<!-- Display -->
+			<h2 id="display"></h2>
+
+		<!-- Buttons -->
+			<button type="button" onclick="clearBtn()"> Clear </button>
+			<button type="button" onclick="allClear()"> All Clear </button>
+			<button type="button" onclick="addition()"> + </button>
+
+			<br>
+			
+			<button type="button" onclick="seven()"> 7 </button>
+			<button type="button" onclick="eight()"> 8 </button>
+			<button type="button" onclick="nine()"> 9 </button>
+			<button type="button" onclick="subtraction()"> - </button>
+
+			<br>
+
+			<button type="button" onclick="four()"> 4 </button>
+			<button type="button" onclick="five()"> 5 </button>
+			<button type="button" onclick="six()"> 6 </button>
+			<button type="button" onclick="multiplication()"> * </button>
+
+			<br>
+
+			<button type="button" onclick="one()"> 1 </button>
+			<button type="button" onclick="two()"> 2 </button>
+			<button type="button" onclick="three()"> 3 </button>
+			<button type="button" onclick="division()"> / </button>
+
+			<br>
+
+			<button type="button" onclick="zero()"> 0 </button>
+			<button type="button" onclick="enter()"> Enter </button>
+			<button type="button" onclick="negativeValues()"> neg </button>
+
+	<script type="text/javascript">
+		//Setting Variables
+			let x = 0;
+				document.getElementById("display").innerHTML = (x);
+			let y = 0;
+			let z;
+			const neg = "-";
+			const ca = 0;
+
+		//Number buttons
+			function seven() {
+				z = "7";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function eight() {
+				z = "8";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function nine() {
+				z = "9";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function four() {
+				z = "4";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function five() {
+				z = "5";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function six() {
+				z = "6";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function one() {
+					z = "1";
+					x = parseFloat(x + z);
+					document.getElementById("display").innerHTML = (x);
+				};
+
+			function two() {
+				z = "2";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+			function three() {
+				z = "3";
+				x = parseFloat(x + z);
+				document.getElementById("display").innerHTML = (x);
+			};
+
+		//Clear and neg
+			function clearBtn() {
+				x = 0;
+				document.getElementById("display").innerHTML = (x);
+
+			};
+
+			function allClear() {
+				x = 0;
+				y = 0;
+				document.getElementById("display").innerHTML = (x);
+			}
+
+			function negativeValues() {
+				x = x * -1;
+				document.getElementById("display").innerHTML = (x);
+			};
+
+		//0, enter
+			function zero() {
+					z = "0";
+					x = parseFloat(x + z);
+					document.getElementById("display").innerHTML = (x);
+				};
+
+			function enter() {
+				if (y != 0) {
+					document.getElementById("num2").innerHTML = ("Second variable saved as: " + x + ". Please choose an operand");
+				} else {
+					document.getElementById("num1").innerHTML = ("First variable saved as: " + x);
+					y = x;
+					x = 0;
+					document.getElementById("display").innerHTML = (x);
+				};
+			};
+
+		let final;
+
+		//Functions for Operators
+			function addition() {
+				final = y + x;
+				document.getElementById("answer").innerHTML = (final);
+			};
+
+			function subtraction() {
+				final = y - x;
+				document.getElementById("answer").innerHTML = (final);
+			};
+
+			function multiplication() {
+				final = y * x;
+				document.getElementById("answer").innerHTML = (final);
+			};
+
+			function division() {
+				if (x == 0) {
+					document.getElementById("answer").innerHTML = ("Cannot divide by zero :(");	
+				} else {
+					final = y / x;
+					document.getElementById("answer").innerHTML = (final);	
+				};
+			};
+
+		/* A bit of help from these websites:
+
+		https://www.w3schools.com/jsref/dom_obj_document.asp
+
+		https://freshman.tech/calculator/ */
+
+	</script>
+
+	<!-- Answers -->
+		<p id="num1"></p>
+		<p id="num2"></p>
+
+		<br>
+		
+		<p>Answer:</p>
+		<p id="answer"></p>
+
+	</script>
+</body>
+</html>

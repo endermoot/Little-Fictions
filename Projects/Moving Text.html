@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZOOM ZOOM</title>
+	<style type="text/css">
+		#box {
+			position: absolute;
+			top: 150px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			padding: 10px;
+			border: 2px solid black;
+		}
+
+		#buttons {
+			text-align: center;
+			padding: .25cm;
+		}
+
+		div {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="buttons">
+		<button type="button" onclick="pos(-1, 0)">Left</button>
+		<button type="button" onclick="pos(1, 0)">Right</button>
+		<button type="button" onclick="pos(0, -1)">Up</button>
+		<button type="button" onclick="pos(0, 1)">Down</button>
+
+		<br>
+
+		<button type="button" onclick="conceal()">Hide</button>
+		<button type="button" onclick="reveal()">Show</button>
+		<button type="button" onclick="text()">Change Text</button>
+
+	</div>
+
+	<!-- A COOL LINE -->
+		<hr/>
+
+	<div id="box">
+		<p id="text"></p>
+	</div>
+
+	<script type="text/javascript">
+		var x=100, y=150;
+
+		function pos(dx, dy) {
+			if (!document.getElementById) return;
+			x += 20 * dx;
+			y += 20 * dy;
+			obj = document.getElementById("box");
+			obj.style.top = y + "px";
+			obj.style.top = x + "px";
+		};
+
+		function conceal() {
+			if (!document.getElementById) return;
+			obj = document.getElementById("box");
+			obj.style.display = "none";
+		};
+
+		function reveal() {
+			if (!document.getElementById) return;
+			obj = document.getElementById("box");
+			obj.style.display = "block";
+		};
+
+		function text() {
+			var input = prompt("Please insert your text");
+			document.getElementById("text").innerHTML = input;
+		}
+	</script>
+</body>
+</html>
